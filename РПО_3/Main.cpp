@@ -298,7 +298,7 @@ int main() {
 	23213213;
 
 
-	std::cout < "пока";
+	std::cout << "пока";
 
 
 	return 0;
