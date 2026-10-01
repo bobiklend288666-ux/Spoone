@@ -288,18 +288,89 @@ int main()
 
 
 
+
+/*
+	тип_возврата Имя_Функция(аргументы_функция, ...)
+	{
+		тело_функции
+	}
+
+	*/
+
+//void PrintNum (int a)
+//{
+//	std::cout << a << "\n";
+//}
+//void PrintNum(int a, double b)
+//{
+//	a += b;
+//	std::cout << a + b << "\n";
+//}
+//int Sum(int a, int b)
+//{
+//	return a + b;
+//}
+
 #include <iostream>
 #include <windows.h>
-int main() {
+
+int Sum(int a, int b) // Сложение
+{
+	return a + b;
+}
+
+int Min(int a, int b) // Вычитание
+{
+	return a - b;
+}
+
+int Um(int a, int b) // Умножение
+{
+	return a * b;
+}
+
+int Del(int a, int b) // Деление
+{
+	return a / b;
+}
+
+int main() 
+{
 	SetConsoleCP (CP_UTF8);
 	SetConsoleOutputCP (CP_UTF8);
-	srand(time(NULL);
+	int nomer1 = 0;
+	int operatorkal;
+	int nomer2 = 0;
 
-	23213213;
+	while (true) 
+	{
+		std::cout << "\n----Калькулятор----\n";
+		std::cout << "Выберете первое число: \n";
+		std::cin >> nomer1;
+		std::cout << "Введите что сделать с числами: \n1) + \n2) - \n3) * \n4) / \n";
+		std::cin >> operatorkal;
+		std::cout << "Введите второе число: \n";
+		std::cin >> nomer2;
+		if (operatorkal == 1)
+		{
+			std::cout << "\nРезультат: " << Sum(nomer1 , nomer2);
+		}
+		if (operatorkal == 2)
+		{
+			std::cout << "Результат: " << Min(nomer1, nomer2);
+		}
+		if (operatorkal == 3)
+		{
+			std::cout << "Результат: " << Um(nomer1, nomer2);
+		}
+		if (operatorkal == 4)
+		{
+			std::cout << "Результат: " << Del(nomer1, nomer2);
+		}
+	}
+	
+	
 
-
-	std::cout << "пока";
-
-
+	
 	return 0;
 }
