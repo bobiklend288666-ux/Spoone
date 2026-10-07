@@ -373,78 +373,118 @@ int main()
 
 
 
+
+
+
+
+
+//#include <iostream>
+//#include <windows.h>
+//
+//void FillArray(int arr[], int row)
+//{
+//	for (size_t i = 0; i < row; i++)
+//	{
+//		arr[i] = rand() % 100;
+//	}
+//}
+//void FillArray(double arr[], int row)
+//{
+//	for (size_t i = 0; i < row; i++)
+//	{
+//		arr[i] =(rand() % 20 + 1) + (double)(rand()% 9 + 1) /10;
+//	}
+//}
+//void FillArray(char arr[], int row)
+//{
+//	for (size_t i = 0; i < row; i++)
+//	{
+//		arr[i] = 'a' + rand() % 26;
+//	}
+//}
+//
+//
+//void ShowArray(int arr[], int row)
+//{
+//	for (int i = 0; i < row; i++)
+//	{
+//		std::cout << arr[i] << ", ";
+//	}
+//	std::cout << "\n";
+//}
+//void ShowArray(char arr[], int row)
+//{
+//	for (int i = 0; i < row; i++)
+//	{
+//		std::cout << arr[i] << ", ";
+//	}
+//	std::cout << "\n";
+//}
+//void ShowArray(double arr[], int row)
+//{
+//	for (int i = 0; i < row; i++)
+//	{
+//		std::cout << arr[i] << ", ";
+//	}
+//	std::cout << "\n";
+//}
+//int Fak(int num)
+//{
+//	if (num<0)
+//	{
+//		return 0;
+//	}
+//	if (num == 0)
+//	{
+//		return 1;
+//	}
+//	return num * Fak(num - 1);
+//}
+//int main()
+//{
+//	SetConsoleCP(CP_UTF8);
+//	SetConsoleOutputCP (CP_UTF8);
+//
+//	const int row = 4;
+//	int arr1[row];
+//	double arr2[row];
+//	char arr3[row];
+//
+//	FillArray(arr1, row);
+//	FillArray(arr2, row);
+//	FillArray(arr3, row);
+//
+//	std::cout << "Массив int: ";
+//	ShowArray(arr1, row);
+//	std::cout << "Массив double: ";
+//	ShowArray(arr2, row);
+//	std::cout << "Массив char: ";
+//	ShowArray(arr3, row);
+//
+//
+//
+//	return 0;
+//}
+
+
 #include <iostream>
 #include <windows.h>
-
-void FillArray(int arr[], int row)
+int Fak(int num,int num1)
 {
-	for (size_t i = 0; i < row; i++)
+	if (num1 == 0)
 	{
-		arr[i] = rand() % 100;
+		return 0;
 	}
-}
-void FillArray(double arr[], int row)
-{
-	for (size_t i = 0; i < row; i++)
-	{
-		arr[i] =(rand() % 20 + 1) + (double)(rand()% 9 + 1) /10;
-	}
-}
-void FillArray(char arr[], int row)
-{
-	for (size_t i = 0; i < row; i++)
-	{
-		arr[i] = 'a' + rand() % 26;
-	}
+	return num + Fak(num, num1 - 1);
 }
 
 
-void ShowArray(int arr[], int row)
-{
-	for (int i = 0; i < row; i++)
-	{
-		std::cout << arr[i] << ", ";
-	}
-	std::cout << "\n";
-}
-void ShowArray(char arr[], int row)
-{
-	for (int i = 0; i < row; i++)
-	{
-		std::cout << arr[i] << ", ";
-	}
-	std::cout << "\n";
-}
-void ShowArray(double arr[], int row)
-{
-	for (int i = 0; i < row; i++)
-	{
-		std::cout << arr[i] << ", ";
-	}
-	std::cout << "\n";
-}
 int main()
 {
 	SetConsoleCP(CP_UTF8);
 	SetConsoleOutputCP (CP_UTF8);
 
-	const int row = 4;
-	int arr1[row];
-	double arr2[row];
-	char arr3[row];
-
-	FillArray(arr1, row);
-	FillArray(arr2, row);
-	FillArray(arr3, row);
-
-	std::cout << "Массив int: ";
-	ShowArray(arr1, row);
-	std::cout << "Массив double: ";
-	ShowArray(arr2, row);
-	std::cout << "Массив char: ";
-	ShowArray(arr3, row);
-
-
+	Fak(12, 43);
 
 	return 0;
 }
